@@ -1,0 +1,69 @@
+/* General Body Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-color: #fdfbfb; /* Light background to improve visibility */
+  color: #333;
+}
+
+.product_img{
+  object-fit: contain;
+  width: 100%;
+  height: 250px;
+}
+
+/* Navbar Styling */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: rgb(60, 60, 60);
+  color: red;
+  z-index: 10; /* Ensures navbar stays on top */
+  padding: 10px 20px;
+  text-align: center;
+}
+.navbarimage{
+  width: 100px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+/* Carousel Styling */
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 25px; ; /* Makes it proportional to the screen */
+  background-color: #514d4a;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Routes Area */
+.routes-container {
+  padding: 20px;
+  min-height: 50vh; /* Ensures space for dynamic content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Buttons and Links */
+button, a {
+  color: rgb(151, 149, 149);
+  background-color: rgb(252, 251, 251);
+  padding: 10px 15px;
+  margin: 10px;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover, a:hover {
+  background-color: rgb(116, 115, 115);
+  color: rgb(249, 248, 248);
+}

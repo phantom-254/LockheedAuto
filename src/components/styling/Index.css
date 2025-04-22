@@ -1,0 +1,70 @@
+.index-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .carousel-container {
+    margin-bottom: 2rem;
+  }
+  
+  .main-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 600px;
+  }
+  
+  .main-header h1 {
+    font-size: 2.5rem;
+    color: #1e1e1e;
+  }
+  
+  .main-header p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .contact-section, .social-section, .navigation-section {
+    margin-bottom: 2rem;
+  }
+  
+  .contact-section ul,
+  .social-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contact-section li,
+  .social-section li {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  a {
+    color: #0077cc;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+    color: #005fa3;
+  }
+  
+  .nav-button {
+    display: inline-block;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    padding: 10px 20px;
+    background-color: #0077cc;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-button:hover {
+    background-color: #005fa3;
+  }
+  
