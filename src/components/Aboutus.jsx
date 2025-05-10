@@ -4,6 +4,7 @@ import React from 'react'
 
 const Aboutus = () => {
   return (
+    
     <div className='col-md-center p-2'>
         <h1><b><i>About Lockheed Auto</i></b></h1>
         

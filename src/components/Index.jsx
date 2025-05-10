@@ -6,6 +6,7 @@ import "./styling/Index.css";
 const Index = () => {
   const contactInfo = {
     email: "lockheedauto@gmail.com",
+    
     phone: "+1 684-325-891",
     social: {
       facebook: "https://www.facebook.com/lockheedauto",
