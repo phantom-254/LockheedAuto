@@ -56,47 +56,47 @@ const GetProducts = () => {
         {error && <p className="text-danger text-center">{error}</p>}
 
         {/* Search Bar */}
-        <input
-          type="text"
-          placeholder="Search products..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className="form-control mb-4 mt-3"
-        />
+        <div className="search-bar-container">
+          <input
+            type="text"
+            placeholder="Search products..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="search-bar"
+          />
+        </div>
 
         {/* Product Grid */}
-        <div className="row">
+        <div className="card-container">
           {!loading && filteredProducts.length === 0 && (
             <p className="text-center text-muted">No products found.</p>
           )}
 
           {filteredProducts.map((product) => (
-            <div className="col-md-3 mb-4" key={product.id}>
-              <div className="card shadow p-2 h-100">
-                <img
-                  src={img_url + product.product_photo}
-                  alt={product.product_name || "Product image"}
-                  className="card-img-top"
-                />
-                <div className="card-body text-center">
-                  <h5 className="text-primary">{product.product_name}</h5>
-                  <p className="text-muted">
-                    {product.product_description.slice(0, 50)}...
-                  </p>
-                  <b className="text-warning">
-                    <span className="text-dark">Kes </span>
-                    {product.product_cost}
-                  </b>
-                  <br />
-                  <button
-                    className="btn btn-info mt-2"
-                    onClick={() =>
-                      navigate("/Payment", { state: { product } })
-                    }
-                  >
-                    View Details
-                  </button>
-                </div>
+            <div className="card" key={product.id}>
+              <img
+                src={img_url + product.product_photo}
+                alt={product.product_name || "Product image"}
+                className="card-img-top"
+              />
+              <div className="card-body">
+                <h5 className="text-primary">{product.product_name}</h5>
+                <p className="text-muted">
+                  {product.product_description.slice(0, 100)}...
+                </p>
+                <b className="price">
+                  <span className="text-dark">Kes </span>
+                  {product.product_cost}
+                </b>
+                <br />
+                <button
+                  className="details-button"
+                  onClick={() =>
+                    navigate("/Payment", { state: { product } })
+                  }
+                >
+                  View Details
+                </button>
               </div>
             </div>
           ))}

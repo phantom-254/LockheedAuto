@@ -1,25 +1,27 @@
+import React from 'react';
 
-import React from 'react'
-
-
-const Aboutus = () => {
+const AboutUs = () => {
   return (
-    
-    <div className='col-md-center p-2'>
-        <h1><b><i>About Lockheed Auto</i></b></h1>
-        
-        <p>Lockheed Auto is a shopping center for vehicles, located in Burnberry, Nostal. We have a large variety of vehicles for our customers to choose from ranging from ; Sport Utility , Sports, J.D.M, family and others.</p><br />
-        <p>We try to keep our stock diverse so as to be able to meet the expectations and desires of our customers. For that reason we have vehicles from every major vehicle manufacturer in the world. So be free to explore our collection and be assured to find one that tickles your fancy.</p>
-        {/* link to available vehicles */}
+    <div className='col-md-center p-4'>
+      <h1><b><i>About SuggestionBridge</i></b></h1>
+      
+      <p>
+        <strong>SuggestionBridge</strong> is a modern digital platform that empowers both clients and employees to voice their ideas, concerns, and suggestions in a constructive and anonymous manner. Whether you're interacting with a government department or a service company, your feedback can help improve service delivery and workplace culture.
+      </p>
+      <br />
+      <p>
+        The platform is designed to bridge the communication gap by providing two clearly defined portals — one for employees, and one for clients. Suggestions are securely stored and easily manageable by authorized administrators within the organization.
+      </p>
 
-        <p>To see our available vehicles, click <a href="/Getproducts">here</a></p>
+      <p>
+        To explore how it works, click <a href="/Getproducts">here</a> {/* This should ideally link to a demo or documentation page instead */}.
+      </p>
 
-        <p>Lockheed Auto was founded by Samuel Lockheed and family hence its a family-run business. Currently Sir Lockheed is retired so his son Martin Locheed runs the businees on his behalf. </p>
-   
-
-
+      <p>
+        SuggestionBridge was founded by a team passionate about transparency, efficiency, and inclusive feedback. We believe that great ideas can come from anyone, and every voice matters.
+      </p>
     </div>
-  )
-}
+  );
+};
 
-export default Aboutus
+export default AboutUs;

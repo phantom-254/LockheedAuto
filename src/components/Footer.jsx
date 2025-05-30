@@ -1,16 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
-    <footer>
-      <p>&copy; {new Date().getFullYear()} Lockheed Auto. All rights reserved.</p>
-      <nav>
-        <ul>
-          <li><a href="#privacy-policy">Privacy Policy</a></li> <br />
-          <li><a href="#terms-of-service">Terms of Service</a></li> <br />
-          <li><a href="#contact">Contact Us</a></li>
-        </ul>
-      </nav>
+    <footer className="bg-dark text-white p-4 mt-5">
+      <div className="container text-center">
+        <p>&copy; {new Date().getFullYear()} SuggestionBridge. All rights reserved.</p>
+        <nav>
+          <ul className="list-unstyled d-flex justify-content-center gap-3">
+            <li><Link to="/privacy-policy" className="text-white">Privacy Policy</Link></li>
+            <li><Link to="/terms-of-service" className="text-white">Terms of Service</Link></li>
+            <li><Link to="/contact" className="text-white">Contact Us</Link></li>
+          </ul>
+        </nav>
+      </div>
     </footer>
   );
 }

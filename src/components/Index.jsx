@@ -1,38 +1,33 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
+import ImageCarousel from "./Carousel"; // Import the carousel
 import "./styling/Index.css";
 
 const Index = () => {
   const contactInfo = {
-    email: "lockheedauto@gmail.com",
-    
+    email: "$name@gmail.com",
     phone: "+1 684-325-891",
     social: {
-      facebook: "https://www.facebook.com/lockheedauto",
-      instagram: "https://www.instagram.com/lockheedauto",
-      x: "https://twitter.com/lockheedauto",
-      linkedin: "https://www.linkedin.com/company/lockheedauto",
+      facebook: "https://www.facebook.com/$name",
+      instagram: "https://www.instagram.com/$name",
+      x: "https://twitter.com/$name",
+      linkedin: "https://www.linkedin.com/company/$name",
     },
   };
 
   return (
     <main className="index-container">
       <div className="carousel-container">
-
+        <ImageCarousel /> {/* Added carousel here */}
       </div>
-
+      
       <header className="main-header">
-        <h1>Welcome to Lockheed Auto</h1>
-        <p>
-          Looking to own a vehicle? No matter the make or model—rest assured,
-          we have it or can get it for you.
-        </p>
-        <p>
-          At Lockheed Auto, we take variety seriously. If you don't find the
-          specific vehicle you’re looking for, contact us—we'll assist in
-          acquiring the car of your choice.
-        </p>
+        <h1>Welcome  $name </h1>
+        <p>The sole purpose of this website is to give a voice to the clients and employees who see flaws in the deliverance of seervice within the company.</p>
+        <p>We value the integrity and as such we  have decided that your identities be anonymous . Nevertheless we expect utmost  discipline while using the app.</p>
+        <p>Enjoy the app!!</p>
+        
       </header>
 
       <section className="contact-section">
@@ -40,7 +35,7 @@ const Index = () => {
         <ul>
           <li>
             Email: <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
-          </li>
+          </li><br />
           <li>
             Phone: <a href={`tel:${contactInfo.phone.replace(/[^+\d]/g, "")}`}>{contactInfo.phone}</a>
           </li>
@@ -63,9 +58,6 @@ const Index = () => {
 
       <section className="navigation-section">
         <h2>Explore More</h2>
-        <Link to="/Getproducts" className="nav-button">
-          View Available Vehicles
-        </Link>
         <Link to="/Aboutus" className="nav-button">
           Learn More About Us
         </Link>

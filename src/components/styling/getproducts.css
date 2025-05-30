@@ -1,8 +1,16 @@
+/* General Body Styling */
 body {
   margin: 0;
   padding: 20px;
   font-family: Arial, sans-serif;
   background-color: #ffffff;
+  overflow-y: auto;
+  height: auto;
+}
+
+/* Main Content Wrapper */
+.myContents {
+  padding-top: 20px; /* Ensures space from top without pushing content */
 }
 
 /* Search Bar */
@@ -35,7 +43,7 @@ body {
   font-style: italic;
 }
 
-/* Card Container */
+/* Card Grid Container */
 .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -43,12 +51,12 @@ body {
   padding: 20px;
 }
 
-/* Card Styling */
+/* Individual Card Styling */
 .card {
   display: flex;
   flex-direction: column;
-  width: 100%;              /* ✅ Responsive width */
-  max-width: 100%;          /* ✅ Ensure card stays within grid cell */
+  width: 100%;
+  max-width: 100%;
   margin: 10px;
   padding: 16px;
   border: 2px solid #ddd;
@@ -65,7 +73,7 @@ body {
 
 .card-img-top {
   width: 100%;
-  height: 180px;            /* ✅ Slightly increased for consistency */
+  height: 180px;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
 }
@@ -74,23 +82,35 @@ body {
   text-align: center;
 }
 
+/* Truncated Description */
+.card p {
+  color: #555;
+  font-size: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* Product Title */
+.card h5,
 .card h3 {
   margin: 10px;
   font-size: 1.2em;
 }
 
-.card p {
-  color: #555;
-  font-size: 1em;
-}
-
-.card .price {
+/* Price Label */
+.card .price,
+.card b {
   font-size: 1.5em;
   font-weight: bold;
   color: #000;
 }
 
-.card .details-button {
+/* View Details Button */
+.card .details-button,
+.card .btn {
   display: inline-block;
   background-color: #00bfff;
   color: white;
@@ -103,11 +123,16 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.card .details-button:hover {
+.card .details-button:hover,
+.card .btn:hover {
   background-color: #008cbe;
 }
 
-/* Removed large margin pushing content down */
-.myContents {
-  margin-top: 20px; /* ✅ Adjusted from 550px to a reasonable value */
+/* Footer Styling (Optional) */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  background-color: #f8f8f8;
+  color: #333;
 }

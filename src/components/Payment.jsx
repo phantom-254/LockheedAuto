@@ -21,7 +21,7 @@ const Makepayment = () => {
     //set the loading hook with a message
     setLoading("Please wait as we complete the payment")
 
-    try{
+    try
       // create a new form data object
       const data = new FormData()
 

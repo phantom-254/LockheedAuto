@@ -73,7 +73,8 @@ const AddProduct = () => {
         {error && <p className="text-danger">{error}</p>}
 
         {/* Product form */}
-        <form onSubmit={handleSubmit}>
+        <div className="form">
+          <form onSubmit={handleSubmit}>
           <input
             type="text"
             name="name"
@@ -120,6 +121,7 @@ const AddProduct = () => {
             Add Product
           </button>
         </form>
+        </div>
       </div>
     </div>
   );
